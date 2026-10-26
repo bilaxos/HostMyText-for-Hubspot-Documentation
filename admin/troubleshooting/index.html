@@ -1,0 +1,300 @@
+<!DOCTYPE html><html lang="en" dir="ltr" data-theme="dark" data-has-toc data-has-sidebar class="astro-g5ptsecz"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Troubleshooting and FAQ | HostMyText Documentation</title><link rel="canonical" href="https://bilaxos.github.io/HostMyText-for-Hubspot-Documentation/admin/troubleshooting/"/><link rel="sitemap" href="/HostMyText-for-Hubspot-Documentation/sitemap-index.xml"/><link rel="shortcut icon" href="/HostMyText-for-Hubspot-Documentation/favicon.png" type="image/png"/><meta name="generator" content="Astro v7.4.1"/><meta name="generator" content="Starlight v0.42.6"/><meta property="og:title" content="Troubleshooting and FAQ"/><meta property="og:type" content="article"/><meta property="og:url" content="https://bilaxos.github.io/HostMyText-for-Hubspot-Documentation/admin/troubleshooting/"/><meta property="og:locale" content="en"/><meta property="og:description" content="App messages with cause and fix, and frequent questions."/><meta property="og:site_name" content="HostMyText Documentation"/><meta name="twitter:card" content="summary_large_image"/><meta name="description" content="App messages with cause and fix, and frequent questions."/><script>
+	window.StarlightThemeProvider = (() => {
+		const storedTheme =
+			typeof localStorage !== 'undefined' && localStorage.getItem('starlight-theme');
+		const theme =
+			storedTheme ||
+			(window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+		document.documentElement.dataset.theme = theme === 'light' ? 'light' : 'dark';
+		return {
+			updatePickers(theme = storedTheme || 'auto') {
+				document.querySelectorAll('starlight-theme-select').forEach((picker) => {
+					const select = picker.querySelector('select');
+					if (select) select.value = theme;
+					/** @type {HTMLTemplateElement | null} */
+					const tmpl = document.querySelector(`#theme-icons`);
+					const newIcon = tmpl && tmpl.content.querySelector('.' + theme);
+					if (newIcon) {
+						const oldIcon = picker.querySelector('svg.label-icon');
+						if (oldIcon) {
+							oldIcon.replaceChildren(...newIcon.cloneNode(true).childNodes);
+						}
+					}
+				});
+			},
+		};
+	})();
+</script><template id="theme-icons"><svg aria-hidden="true" class="light astro-hkc32dio" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M5 12a1 1 0 0 0-1-1H3a1 1 0 0 0 0 2h1a1 1 0 0 0 1-1Zm.64 5-.71.71a1 1 0 0 0 0 1.41 1 1 0 0 0 1.41 0l.71-.71A1 1 0 0 0 5.64 17ZM12 5a1 1 0 0 0 1-1V3a1 1 0 0 0-2 0v1a1 1 0 0 0 1 1Zm5.66 2.34a1 1 0 0 0 .7-.29l.71-.71a1 1 0 1 0-1.41-1.41l-.66.71a1 1 0 0 0 0 1.41 1 1 0 0 0 .66.29Zm-12-.29a1 1 0 0 0 1.41 0 1 1 0 0 0 0-1.41l-.71-.71a1.004 1.004 0 1 0-1.43 1.41l.73.71ZM21 11h-1a1 1 0 0 0 0 2h1a1 1 0 0 0 0-2Zm-2.64 6A1 1 0 0 0 17 18.36l.71.71a1 1 0 0 0 1.41 0 1 1 0 0 0 0-1.41l-.76-.66ZM12 6.5a5.5 5.5 0 1 0 5.5 5.5A5.51 5.51 0 0 0 12 6.5Zm0 9a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7Zm0 3.5a1 1 0 0 0-1 1v1a1 1 0 0 0 2 0v-1a1 1 0 0 0-1-1Z"/></svg><svg aria-hidden="true" class="dark astro-hkc32dio" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M21.64 13a1 1 0 0 0-1.05-.14 8.049 8.049 0 0 1-3.37.73 8.15 8.15 0 0 1-8.14-8.1 8.59 8.59 0 0 1 .25-2A1 1 0 0 0 8 2.36a10.14 10.14 0 1 0 14 11.69 1 1 0 0 0-.36-1.05Zm-9.5 6.69A8.14 8.14 0 0 1 7.08 5.22v.27a10.15 10.15 0 0 0 10.14 10.14 9.784 9.784 0 0 0 2.1-.22 8.11 8.11 0 0 1-7.18 4.32v-.04Z"/></svg><svg aria-hidden="true" class="auto astro-hkc32dio" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M21 14h-1V7a3 3 0 0 0-3-3H7a3 3 0 0 0-3 3v7H3a1 1 0 0 0-1 1v2a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3v-2a1 1 0 0 0-1-1ZM6 7a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v7H6V7Zm14 10a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-1h16v1Z"/></svg></template><link rel="stylesheet" href="/HostMyText-for-Hubspot-Documentation/_astro/print.ehPL0gv-.css" media="print"><link rel="stylesheet" href="/HostMyText-for-Hubspot-Documentation/_astro/common.CXvRizsy.css"><style>@layer starlight.components{svg:where(.astro-hkc32dio){color:var(--sl-icon-color);font-size:var(--sl-icon-size,1em);width:1em;height:1em;overflow:visible}}
+</style><script type="module" src="/HostMyText-for-Hubspot-Documentation/_astro/page.CU7vpiom.js"></script></head><body class="astro-g5ptsecz"><a class="sl-skip-link astro-qb7clj6f" href="#_top">Skip to content</a><div class="page sl-flex astro-yntsjkba"><header class="header astro-yntsjkba"><div class="header astro-by6fddyj"><div class="title-wrapper sl-flex astro-by6fddyj"><a href="/HostMyText-for-Hubspot-Documentation/" class="site-title sl-flex astro-6rvad3va"><img class="astro-6rvad3va" alt="HostMyText" src="/HostMyText-for-Hubspot-Documentation/_astro/hostmytext-icon.Db87ArU0.png" width="256" height="256"><span class="astro-6rvad3va" translate="no">HostMyText Documentation</span></a></div><div class="sl-flex print:hidden astro-by6fddyj"><site-search class="astro-by6fddyj astro-b5kgnn7o" data-translations="{&quot;placeholder&quot;:&quot;Search&quot;}"><button data-open-modal disabled aria-label="Search" aria-keyshortcuts="Control+K" class="astro-b5kgnn7o"><svg aria-hidden="true" class="astro-b5kgnn7o astro-hkc32dio" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M21.71 20.29 18 16.61A9 9 0 1 0 16.61 18l3.68 3.68a.999.999 0 0 0 1.42 0 1 1 0 0 0 0-1.39ZM11 18a7 7 0 1 1 0-14 7 7 0 0 1 0 14Z"/></svg><span class="sl-hidden md:sl-block astro-b5kgnn7o" aria-hidden="true">Search</span><kbd class="sl-hidden md:sl-flex astro-b5kgnn7o" style="display: none;"><kbd class="astro-b5kgnn7o">Ctrl</kbd><kbd class="astro-b5kgnn7o">K</kbd></kbd></button><dialog style="padding:0" aria-label="Search" class="astro-b5kgnn7o"><div class="dialog-frame sl-flex astro-b5kgnn7o"><button data-close-modal class="sl-flex md:sl-hidden astro-b5kgnn7o">Cancel</button><div class="search-container astro-b5kgnn7o"><div id="starlight__search" class="astro-b5kgnn7o"></div></div></div></dialog></site-search><script>
+	(() => {
+		const openBtn = document.querySelector('button[data-open-modal]');
+		const shortcut = openBtn?.querySelector('kbd');
+		if (!openBtn || !(shortcut instanceof HTMLElement)) return;
+		const platformKey = shortcut.querySelector('kbd');
+		if (platformKey && /(Mac|iPhone|iPod|iPad)/i.test(navigator.platform)) {
+			platformKey.textContent = '⌘';
+			openBtn.setAttribute('aria-keyshortcuts', 'Meta+K');
+		}
+		shortcut.style.display = '';
+	})();
+</script><script type="module" src="/HostMyText-for-Hubspot-Documentation/_astro/Search.astro_astro_type_script_index_0_lang.BsoucVcc.js"></script></div><div class="sl-hidden md:sl-flex print:hidden right-group astro-by6fddyj"><div class="sl-flex social-icons astro-by6fddyj"></div><starlight-theme-select><label style="--sl-select-width: 6.25em" class="astro-2z5xp7gb"><span class="sr-only astro-2z5xp7gb">Select theme</span><svg aria-hidden="true" class="icon label-icon astro-2z5xp7gb astro-hkc32dio" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M21 14h-1V7a3 3 0 0 0-3-3H7a3 3 0 0 0-3 3v7H3a1 1 0 0 0-1 1v2a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3v-2a1 1 0 0 0-1-1ZM6 7a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v7H6V7Zm14 10a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-1h16v1Z"/></svg><select autocomplete="off" class="astro-2z5xp7gb"><option value="dark" class="astro-2z5xp7gb">Dark</option><option value="light" class="astro-2z5xp7gb">Light</option><option value="auto" selected class="astro-2z5xp7gb">Auto</option></select><svg aria-hidden="true" class="icon caret astro-2z5xp7gb astro-hkc32dio" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M17 9.17a1 1 0 0 0-1.41 0L12 12.71 8.46 9.17a1 1 0 1 0-1.41 1.42l4.24 4.24a1.002 1.002 0 0 0 1.42 0L17 10.59a1.002 1.002 0 0 0 0-1.42Z"/></svg></label></starlight-theme-select><script>
+	StarlightThemeProvider.updatePickers();
+</script><script type="module">var e=`starlight-theme`,t=e=>e===`auto`||e===`dark`||e===`light`?e:`auto`,n=()=>t(typeof localStorage<`u`&&localStorage.getItem(e));function r(t){typeof localStorage<`u`&&localStorage.setItem(e,t===`light`||t===`dark`?t:``)}var i=()=>matchMedia(`(prefers-color-scheme: light)`).matches?`light`:`dark`;function a(e){StarlightThemeProvider.updatePickers(e),document.documentElement.dataset.theme=e===`auto`?i():e,r(e)}matchMedia(`(prefers-color-scheme: light)`).addEventListener(`change`,()=>{n()===`auto`&&a(`auto`)});var o=class extends HTMLElement{constructor(){super(),a(n()),this.querySelector(`select`)?.addEventListener(`change`,e=>{e.currentTarget instanceof HTMLSelectElement&&a(t(e.currentTarget.value))})}};customElements.define(`starlight-theme-select`,o);</script><script type="module">var e=class extends HTMLElement{constructor(){super();let e=this.querySelector(`select`);e&&(e.addEventListener(`change`,e=>{e.currentTarget instanceof HTMLSelectElement&&(window.location.pathname=e.currentTarget.value)}),window.addEventListener(`pageshow`,t=>{if(!t.persisted)return;let n=e.querySelector(`option[selected]`)?.index;n!==e.selectedIndex&&(e.selectedIndex=n??0)}))}};customElements.define(`starlight-lang-select`,e);</script></div></div></header><nav class="sidebar print:hidden astro-yntsjkba" aria-label="Main"><button popovertarget="starlight__sidebar" class="sl-menu-button sl-flex md:sl-hidden print:hidden astro-r2osgdlg"><svg aria-hidden="true" class="open-menu astro-r2osgdlg astro-hkc32dio" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M3 8h18a1 1 0 1 0 0-2H3a1 1 0 0 0 0 2Zm18 8H3a1 1 0 0 0 0 2h18a1 1 0 0 0 0-2Zm0-5H3a1 1 0 0 0 0 2h18a1 1 0 0 0 0-2Z"/></svg><svg aria-hidden="true" class="close-menu astro-r2osgdlg astro-hkc32dio" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="m13.41 12 6.3-6.29a1.004 1.004 0 1 0-1.42-1.42L12 10.59l-6.29-6.3a1.004 1.004 0 0 0-1.42 1.42l6.3 6.29-6.3 6.29a1 1 0 0 0 0 1.42.998.998 0 0 0 1.42 0l6.29-6.3 6.29 6.3a.999.999 0 0 0 1.42 0 1 1 0 0 0 0-1.42L13.41 12Z"/></svg><span class="sr-only astro-r2osgdlg">Menu</span></button><script type="module">var e=class extends HTMLElement{constructor(){super();let e=matchMedia(`(min-width: 50em)`),t=()=>{this.popover=e.matches?null:`auto`};t(),e.addEventListener(`change`,()=>t()),this.addEventListener(`toggle`,({newState:e})=>this.trapFocus(e===`open`))}trapFocus(e){document.querySelectorAll(`.main-frame, .sl-skip-link`).forEach(t=>{t.toggleAttribute(`inert`,e)})}};customElements.define(`sl-sidebar-pane`,e);</script><sl-sidebar-pane popover id="starlight__sidebar" class="sidebar-pane astro-yntsjkba"><div class="sidebar-content sl-flex astro-yntsjkba"><sl-sidebar-state-persist data-hash="078w76r" class="astro-ipdry5cl"><script aria-hidden="true">
+		(() => {
+			try {
+				if (!matchMedia('(min-width: 50em)').matches) return;
+				/** @type {HTMLElement | null} */
+				const target = document.querySelector('sl-sidebar-state-persist');
+				const state = JSON.parse(sessionStorage.getItem('sl-sidebar-state') || '0');
+				if (!target || !state || target.dataset.hash !== state.hash) return;
+				window._starlightScrollRestore = state.scroll;
+				customElements.define(
+					'sl-sidebar-restore',
+					class SidebarRestore extends HTMLElement {
+						connectedCallback() {
+							try {
+								const idx = parseInt(this.dataset.index || '');
+								const details = this.closest('details');
+								if (details && typeof state.open[idx] === 'boolean') details.open = state.open[idx];
+							} catch {}
+						}
+					}
+				);
+			} catch {}
+		})();
+	</script><ul class="top-level astro-rmhv4bp6"><li class="astro-rmhv4bp6"><details open class="astro-rmhv4bp6"><summary class="astro-rmhv4bp6"><span class="group-label astro-rmhv4bp6"><span class="large astro-rmhv4bp6">For administrators</span></span><svg aria-hidden="true" class="caret astro-rmhv4bp6 astro-hkc32dio" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.25rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg></summary><sl-sidebar-restore data-index="0"></sl-sidebar-restore><ul class="astro-rmhv4bp6"><li class="astro-rmhv4bp6"><a href="/HostMyText-for-Hubspot-Documentation/admin/overview/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">Overview and requirements</span></a></li><li class="astro-rmhv4bp6"><a href="/HostMyText-for-Hubspot-Documentation/admin/install/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">Install and connect</span></a></li><li class="astro-rmhv4bp6"><a href="/HostMyText-for-Hubspot-Documentation/admin/setup/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">Setup guide</span></a></li><li class="astro-rmhv4bp6"><a href="/HostMyText-for-Hubspot-Documentation/admin/manage/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">Admin guide</span></a></li><li class="astro-rmhv4bp6"><a href="/HostMyText-for-Hubspot-Documentation/admin/troubleshooting/" aria-current="page" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">Troubleshooting and FAQ</span></a></li></ul></details></li><li class="astro-rmhv4bp6"><details open class="astro-rmhv4bp6"><summary class="astro-rmhv4bp6"><span class="group-label astro-rmhv4bp6"><span class="large astro-rmhv4bp6">For users</span></span><svg aria-hidden="true" class="caret astro-rmhv4bp6 astro-hkc32dio" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.25rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg></summary><sl-sidebar-restore data-index="1"></sl-sidebar-restore><ul class="astro-rmhv4bp6"><li class="astro-rmhv4bp6"><a href="/HostMyText-for-Hubspot-Documentation/users/quick-start/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">Quick start for reps</span></a></li><li class="astro-rmhv4bp6"><a href="/HostMyText-for-Hubspot-Documentation/users/guide/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">User guide for reps</span></a></li></ul></details></li><li class="astro-rmhv4bp6"><details open class="astro-rmhv4bp6"><summary class="astro-rmhv4bp6"><span class="group-label astro-rmhv4bp6"><span class="large astro-rmhv4bp6">Examples</span></span><svg aria-hidden="true" class="caret astro-rmhv4bp6 astro-hkc32dio" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.25rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg></summary><sl-sidebar-restore data-index="2"></sl-sidebar-restore><ul class="astro-rmhv4bp6"><li class="astro-rmhv4bp6"><a href="/HostMyText-for-Hubspot-Documentation/examples/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">Use-case catalogue</span></a></li></ul></details></li><li class="astro-rmhv4bp6"><details open class="astro-rmhv4bp6"><summary class="astro-rmhv4bp6"><span class="group-label astro-rmhv4bp6"><span class="large astro-rmhv4bp6">Marketplace setup guide</span></span><svg aria-hidden="true" class="caret astro-rmhv4bp6 astro-hkc32dio" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.25rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg></summary><sl-sidebar-restore data-index="3"></sl-sidebar-restore><ul class="astro-rmhv4bp6"><li class="astro-rmhv4bp6"><a href="/HostMyText-for-Hubspot-Documentation/setup/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">Setup guide for HubSpot users</span></a></li></ul></details></li><li class="astro-rmhv4bp6"><details open class="astro-rmhv4bp6"><summary class="astro-rmhv4bp6"><span class="group-label astro-rmhv4bp6"><span class="large astro-rmhv4bp6">Support and legal</span></span><svg aria-hidden="true" class="caret astro-rmhv4bp6 astro-hkc32dio" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.25rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg></summary><sl-sidebar-restore data-index="4"></sl-sidebar-restore><ul class="astro-rmhv4bp6"><li class="astro-rmhv4bp6"><a href="https://www.hostmy.com/get-support" class="astro-rmhv4bp6" target="_blank" rel="noopener"><span class="astro-rmhv4bp6">Support</span></a></li><li class="astro-rmhv4bp6"><a href="https://www.hostmy.com/sms-terms-of-service" class="astro-rmhv4bp6" target="_blank" rel="noopener"><span class="astro-rmhv4bp6">SMS terms of service</span></a></li><li class="astro-rmhv4bp6"><a href="https://www.hostmy.com/privacy-policy" class="astro-rmhv4bp6" target="_blank" rel="noopener"><span class="astro-rmhv4bp6">Privacy policy</span></a></li></ul></details></li></ul><script aria-hidden="true">
+		(() => {
+			const scroller = document.getElementById('starlight__sidebar');
+			if (!window._starlightScrollRestore || !scroller) return;
+			scroller.scrollTop = window._starlightScrollRestore;
+			delete window._starlightScrollRestore;
+		})();
+	</script></sl-sidebar-state-persist><div class="md:sl-hidden"><div class="mobile-preferences sl-flex astro-p4azlveh"><div class="social-icons astro-p4azlveh"></div><starlight-theme-select><label style="--sl-select-width: 6.25em" class="astro-2z5xp7gb"><span class="sr-only astro-2z5xp7gb">Select theme</span><svg aria-hidden="true" class="icon label-icon astro-2z5xp7gb astro-hkc32dio" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M21 14h-1V7a3 3 0 0 0-3-3H7a3 3 0 0 0-3 3v7H3a1 1 0 0 0-1 1v2a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3v-2a1 1 0 0 0-1-1ZM6 7a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v7H6V7Zm14 10a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-1h16v1Z"/></svg><select autocomplete="off" class="astro-2z5xp7gb"><option value="dark" class="astro-2z5xp7gb">Dark</option><option value="light" class="astro-2z5xp7gb">Light</option><option value="auto" selected class="astro-2z5xp7gb">Auto</option></select><svg aria-hidden="true" class="icon caret astro-2z5xp7gb astro-hkc32dio" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M17 9.17a1 1 0 0 0-1.41 0L12 12.71 8.46 9.17a1 1 0 1 0-1.41 1.42l4.24 4.24a1.002 1.002 0 0 0 1.42 0L17 10.59a1.002 1.002 0 0 0 0-1.42Z"/></svg></label></starlight-theme-select><script>
+	StarlightThemeProvider.updatePickers();
+</script></div></div></div></sl-sidebar-pane></nav><div class="main-frame astro-yntsjkba"><script type="module">var e=document.getElementById(`starlight__sidebar`),t=e?.querySelector(`sl-sidebar-state-persist`),n=`sl-sidebar-state`,r=()=>{let r=[],i=t?.dataset.hash||``;try{let e=sessionStorage.getItem(n),t=JSON.parse(e||`{}`);Array.isArray(t.open)&&t.hash===i&&(r=t.open)}catch{}return{hash:i,open:r,scroll:e?.scrollTop||0}},i=e=>{try{sessionStorage.setItem(n,JSON.stringify(e))}catch{}},a=()=>i(r()),o=(e,t)=>{let n=r();n.open[t]=e,i(n)};t?.addEventListener(`click`,e=>{if(!(e.target instanceof Element))return;let t=e.target.closest(`summary`)?.closest(`details`);if(!t)return;let n=t.querySelector(`sl-sidebar-restore`),r=parseInt(n?.dataset.index||``);isNaN(r)||o(!t.open,r)}),addEventListener(`visibilitychange`,()=>{document.visibilityState===`hidden`&&a()});</script><div class="lg:sl-flex astro-lrzkfocr"><aside class="right-sidebar-container print:hidden astro-lrzkfocr"><div class="right-sidebar astro-lrzkfocr"><div class="lg:sl-hidden astro-qok35upx"><mobile-starlight-toc data-min-h="2" data-max-h="3" class="astro-66cqc7ze"><nav aria-labelledby="starlight__on-this-page--mobile" class="astro-66cqc7ze"><details id="starlight__mobile-toc" class="astro-66cqc7ze"><summary id="starlight__on-this-page--mobile" class="sl-flex astro-66cqc7ze"><span class="toggle sl-flex astro-66cqc7ze">On this page<svg aria-hidden="true" class="caret astro-66cqc7ze astro-hkc32dio" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg></span><span class="display-current astro-66cqc7ze"></span></summary><div class="dropdown astro-66cqc7ze"><ul class="isMobile astro-jugkfwgx" style="--depth: 0;"><li style="--depth: 0;" class="astro-jugkfwgx"><a href="#_top" style="--depth: 0;" class="astro-jugkfwgx"><span style="--depth: 0;" class="astro-jugkfwgx">Overview</span></a></li><li style="--depth: 0;" class="astro-jugkfwgx"><a href="#install-problems" style="--depth: 0;" class="astro-jugkfwgx"><span style="--depth: 0;" class="astro-jugkfwgx">Install problems</span></a></li><li style="--depth: 0;" class="astro-jugkfwgx"><a href="#card-problems" style="--depth: 0;" class="astro-jugkfwgx"><span style="--depth: 0;" class="astro-jugkfwgx">Card problems</span></a></li><li style="--depth: 0;" class="astro-jugkfwgx"><a href="#settings-page-problems" style="--depth: 0;" class="astro-jugkfwgx"><span style="--depth: 0;" class="astro-jugkfwgx">Settings page problems</span></a></li><li style="--depth: 0;" class="astro-jugkfwgx"><a href="#message-problems" style="--depth: 0;" class="astro-jugkfwgx"><span style="--depth: 0;" class="astro-jugkfwgx">Message problems</span></a><ul class="isMobile astro-jugkfwgx" style="--depth: 1;"><li style="--depth: 1;" class="astro-jugkfwgx"><a href="#a-reply-from-the-inbox-turned-to-failed" style="--depth: 1;" class="astro-jugkfwgx"><span style="--depth: 1;" class="astro-jugkfwgx">A reply from the inbox turned to FAILED</span></a></li><li style="--depth: 1;" class="astro-jugkfwgx"><a href="#a-received-text-has-no-picture" style="--depth: 1;" class="astro-jugkfwgx"><span style="--depth: 1;" class="astro-jugkfwgx">A received text has no picture</span></a></li><li style="--depth: 1;" class="astro-jugkfwgx"><a href="#the-conversation-shows-the-label-unknown-visitor" style="--depth: 1;" class="astro-jugkfwgx"><span style="--depth: 1;" class="astro-jugkfwgx">The conversation shows the label “Unknown Visitor”</span></a></li><li style="--depth: 1;" class="astro-jugkfwgx"><a href="#two-contacts-have-the-same-phone-number" style="--depth: 1;" class="astro-jugkfwgx"><span style="--depth: 1;" class="astro-jugkfwgx">Two contacts have the same phone number</span></a></li><li style="--depth: 1;" class="astro-jugkfwgx"><a href="#a-contact-got-two-replies" style="--depth: 1;" class="astro-jugkfwgx"><span style="--depth: 1;" class="astro-jugkfwgx">A contact got two replies</span></a></li><li style="--depth: 1;" class="astro-jugkfwgx"><a href="#a-contact-was-created-that-nobody-made" style="--depth: 1;" class="astro-jugkfwgx"><span style="--depth: 1;" class="astro-jugkfwgx">A contact was created that nobody made</span></a></li></ul></li><li style="--depth: 0;" class="astro-jugkfwgx"><a href="#history-download-problems" style="--depth: 0;" class="astro-jugkfwgx"><span style="--depth: 0;" class="astro-jugkfwgx">History download problems</span></a><ul class="isMobile astro-jugkfwgx" style="--depth: 1;"><li style="--depth: 1;" class="astro-jugkfwgx"><a href="#the-file-does-not-contain-all-messages" style="--depth: 1;" class="astro-jugkfwgx"><span style="--depth: 1;" class="astro-jugkfwgx">The file does not contain all messages</span></a></li></ul></li><li style="--depth: 0;" class="astro-jugkfwgx"><a href="#faq" style="--depth: 0;" class="astro-jugkfwgx"><span style="--depth: 0;" class="astro-jugkfwgx">FAQ</span></a></li></ul></div></details></nav></mobile-starlight-toc><script type="module" src="/HostMyText-for-Hubspot-Documentation/_astro/MobileTableOfContents.astro_astro_type_script_index_0_lang.C3fM4Kra.js"></script></div><div class="right-sidebar-panel sl-hidden lg:sl-block astro-qok35upx"><div class="sl-container astro-qok35upx"><starlight-toc data-min-h="2" data-max-h="3"><nav aria-labelledby="starlight__on-this-page"><h2 id="starlight__on-this-page">On this page</h2><ul class="astro-jugkfwgx" style="--depth: 0;"><li style="--depth: 0;" class="astro-jugkfwgx"><a href="#_top" style="--depth: 0;" class="astro-jugkfwgx"><span style="--depth: 0;" class="astro-jugkfwgx">Overview</span></a></li><li style="--depth: 0;" class="astro-jugkfwgx"><a href="#install-problems" style="--depth: 0;" class="astro-jugkfwgx"><span style="--depth: 0;" class="astro-jugkfwgx">Install problems</span></a></li><li style="--depth: 0;" class="astro-jugkfwgx"><a href="#card-problems" style="--depth: 0;" class="astro-jugkfwgx"><span style="--depth: 0;" class="astro-jugkfwgx">Card problems</span></a></li><li style="--depth: 0;" class="astro-jugkfwgx"><a href="#settings-page-problems" style="--depth: 0;" class="astro-jugkfwgx"><span style="--depth: 0;" class="astro-jugkfwgx">Settings page problems</span></a></li><li style="--depth: 0;" class="astro-jugkfwgx"><a href="#message-problems" style="--depth: 0;" class="astro-jugkfwgx"><span style="--depth: 0;" class="astro-jugkfwgx">Message problems</span></a><ul class="astro-jugkfwgx" style="--depth: 1;"><li style="--depth: 1;" class="astro-jugkfwgx"><a href="#a-reply-from-the-inbox-turned-to-failed" style="--depth: 1;" class="astro-jugkfwgx"><span style="--depth: 1;" class="astro-jugkfwgx">A reply from the inbox turned to FAILED</span></a></li><li style="--depth: 1;" class="astro-jugkfwgx"><a href="#a-received-text-has-no-picture" style="--depth: 1;" class="astro-jugkfwgx"><span style="--depth: 1;" class="astro-jugkfwgx">A received text has no picture</span></a></li><li style="--depth: 1;" class="astro-jugkfwgx"><a href="#the-conversation-shows-the-label-unknown-visitor" style="--depth: 1;" class="astro-jugkfwgx"><span style="--depth: 1;" class="astro-jugkfwgx">The conversation shows the label “Unknown Visitor”</span></a></li><li style="--depth: 1;" class="astro-jugkfwgx"><a href="#two-contacts-have-the-same-phone-number" style="--depth: 1;" class="astro-jugkfwgx"><span style="--depth: 1;" class="astro-jugkfwgx">Two contacts have the same phone number</span></a></li><li style="--depth: 1;" class="astro-jugkfwgx"><a href="#a-contact-got-two-replies" style="--depth: 1;" class="astro-jugkfwgx"><span style="--depth: 1;" class="astro-jugkfwgx">A contact got two replies</span></a></li><li style="--depth: 1;" class="astro-jugkfwgx"><a href="#a-contact-was-created-that-nobody-made" style="--depth: 1;" class="astro-jugkfwgx"><span style="--depth: 1;" class="astro-jugkfwgx">A contact was created that nobody made</span></a></li></ul></li><li style="--depth: 0;" class="astro-jugkfwgx"><a href="#history-download-problems" style="--depth: 0;" class="astro-jugkfwgx"><span style="--depth: 0;" class="astro-jugkfwgx">History download problems</span></a><ul class="astro-jugkfwgx" style="--depth: 1;"><li style="--depth: 1;" class="astro-jugkfwgx"><a href="#the-file-does-not-contain-all-messages" style="--depth: 1;" class="astro-jugkfwgx"><span style="--depth: 1;" class="astro-jugkfwgx">The file does not contain all messages</span></a></li></ul></li><li style="--depth: 0;" class="astro-jugkfwgx"><a href="#faq" style="--depth: 0;" class="astro-jugkfwgx"><span style="--depth: 0;" class="astro-jugkfwgx">FAQ</span></a></li></ul></nav></starlight-toc><script type="module" src="/HostMyText-for-Hubspot-Documentation/_astro/TableOfContents.astro_astro_type_script_index_0_lang.BpJaGz7G.js"></script></div></div></div></aside><div class="main-pane astro-lrzkfocr"><main data-pagefind-body class="astro-g5ptsecz" lang="en" dir="ltr"><div class="content-panel astro-a7po4psb"><div class="sl-container astro-a7po4psb"><h1 id="_top" class="astro-bebwqqxs">Troubleshooting and FAQ</h1></div></div><div class="content-panel astro-a7po4psb"><div class="sl-container astro-a7po4psb"><div class="sl-markdown-content"><p>Audience: HubSpot administrators, HostMyText organization administrators, and reps.</p>
+<p>Each entry starts with the message that the app shows.</p>
+<p>If a fix does not work, contact HostMyText support: <a href="https://www.hostmy.com/get-support">https://www.hostmy.com/get-support</a></p>
+<div class="sl-heading-wrapper level-h2"><h2 id="install-problems">Install problems</h2><a class="sl-anchor-link" href="#install-problems"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Section titled “Install problems”</span></a></div>
+<p>The install messages are in <a href="/HostMyText-for-Hubspot-Documentation/admin/install/">02 Install and connect</a>, section “If something goes wrong”.</p>
+<div class="sl-heading-wrapper level-h2"><h2 id="card-problems">Card problems</h2><a class="sl-anchor-link" href="#card-problems"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Section titled “Card problems”</span></a></div>
+<p>The card is the <strong>Send SMS</strong> tab on the contact record.</p>
+<table>
+<thead>
+<tr>
+<th>Message</th>
+<th>Cause</th>
+<th>What to do</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Link your HostMyText account</td>
+<td>Your HubSpot user is not linked to a HostMyText login.</td>
+<td>Click <strong>Link your HostMyText account</strong>. Follow step B in <a href="/HostMyText-for-Hubspot-Documentation/admin/setup/">03 Setup guide</a>.</td>
+</tr>
+<tr>
+<td>Could not load your phone numbers.</td>
+<td>The card could not read your numbers.</td>
+<td>Click <strong>Retry</strong>. If it continues, contact support.</td>
+</tr>
+<tr>
+<td>This number isn’t connected to HubSpot, so you can’t send from it here. Connect it on the app’s Settings page first.</td>
+<td>The number in <strong>From</strong> is not connected.</td>
+<td>Choose a connected number. Or ask an admin to connect the number.</td>
+</tr>
+<tr>
+<td>This contact has opted out of receiving messages and cannot be sent to.</td>
+<td>The contact sent STOP.</td>
+<td>You cannot send to this contact. The contact must send START.</td>
+</tr>
+<tr>
+<td>Couldn’t verify this contact’s consent status. The send will still be checked before it goes out.</td>
+<td>The card could not check the opt-out now.</td>
+<td>You can still send. HostMyText checks again before it sends.</td>
+</tr>
+<tr>
+<td>This number doesn’t match the phone number on this contact.</td>
+<td>The number in <strong>To</strong> is not the contact’s phone number or mobile phone number.</td>
+<td>Check the number. You can still send to a different number.</td>
+</tr>
+<tr>
+<td>Message failed to send.</td>
+<td>The send was rejected.</td>
+<td>Read any message under the form. Try again. If it continues, contact support.</td>
+</tr>
+<tr>
+<td>Could not prepare download — try again</td>
+<td>The history file did not start.</td>
+<td>Click the button again.</td>
+</tr>
+</tbody>
+</table>
+<p>The <strong>From</strong> list shows the numbers that you can use in HostMyText.</p>
+<p>The card opens on a connected number.</p>
+<p>The <strong>Send</strong> button stays off while a number that is not connected is chosen.</p>
+<div class="sl-heading-wrapper level-h2"><h2 id="settings-page-problems">Settings page problems</h2><a class="sl-anchor-link" href="#settings-page-problems"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Section titled “Settings page problems”</span></a></div>
+<table>
+<thead>
+<tr>
+<th>Message</th>
+<th>What to do</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Only HostMyText organization admins can connect or disconnect numbers.</td>
+<td>Ask a HostMyText organization admin.</td>
+</tr>
+<tr>
+<td>Link your HubSpot seat first, from the HostMyText card on a contact record, then come back here.</td>
+<td>Link your seat. See step B in <a href="/HostMyText-for-Hubspot-Documentation/admin/setup/">03</a>.</td>
+</tr>
+<tr>
+<td>This HubSpot account is not connected to a HostMyText organization yet.</td>
+<td>Do the install in <a href="/HostMyText-for-Hubspot-Documentation/admin/install/">02</a>.</td>
+</tr>
+<tr>
+<td>Could not verify your HostMyText access. Try again in a moment.</td>
+<td>Wait and try again.</td>
+</tr>
+<tr>
+<td>Could not load this account’s inboxes. Try again in a moment.</td>
+<td>Wait and try again.</td>
+</tr>
+<tr>
+<td>Could not reach HubSpot for this account. Try again in a moment.</td>
+<td>Wait and try again.</td>
+</tr>
+<tr>
+<td>You don’t have access to that number in HostMyText, so you can’t connect or disconnect it.</td>
+<td>Use a user that can use this number in HostMyText.</td>
+</tr>
+<tr>
+<td>That inbox no longer exists. Pick another one.</td>
+<td>Choose another inbox in <strong>HubSpot inbox for new connections</strong>.</td>
+</tr>
+<tr>
+<td>That number does not belong to your organization.</td>
+<td>Reload the page.</td>
+</tr>
+<tr>
+<td>This organization is connected to more than one HubSpot account. Contact HostMyText support.</td>
+<td>Contact support.</td>
+</tr>
+<tr>
+<td>No inboxes were found in this HubSpot account, so numbers can’t be connected yet. Create a conversations inbox in HubSpot, then reload this page.</td>
+<td>Create an inbox. Reload the page.</td>
+</tr>
+<tr>
+<td>No linked HubSpot seats yet</td>
+<td>Link a seat first.</td>
+</tr>
+<tr>
+<td>This sender can’t send from: (numbers) — workflow sends using these numbers will fail until access is granted.</td>
+<td>Choose another sender, or give the user access in HostMyText.</td>
+</tr>
+<tr>
+<td>Could not save the automation sender. / Could not clear the automation sender.</td>
+<td>Try again.</td>
+</tr>
+</tbody>
+</table>
+<div class="sl-heading-wrapper level-h2"><h2 id="message-problems">Message problems</h2><a class="sl-anchor-link" href="#message-problems"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Section titled “Message problems”</span></a></div>
+<div class="sl-heading-wrapper level-h3"><h3 id="a-reply-from-the-inbox-turned-to-failed">A reply from the inbox turned to FAILED</h3><a class="sl-anchor-link" href="#a-reply-from-the-inbox-turned-to-failed"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Section titled “A reply from the inbox turned to FAILED”</span></a></div>
+<p>HubSpot shows the message as FAILED when HostMyText rejects the reply.</p>
+<p>The failure reason shows with the message.</p>
+<p>HubSpot can take about 30 seconds to show FAILED.</p>
+<table>
+<thead>
+<tr>
+<th>Reason</th>
+<th>What to do</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>This contact has opted out of receiving messages and cannot be sent to.</td>
+<td>You cannot send to this contact.</td>
+</tr>
+<tr>
+<td>No HostMyText user is linked to this HubSpot seat.</td>
+<td>Link your seat. See step B in <a href="/HostMyText-for-Hubspot-Documentation/admin/setup/">03</a>.</td>
+</tr>
+<tr>
+<td>The linked user does not have access to the From number.</td>
+<td>Ask for access to the number in HostMyText.</td>
+</tr>
+<tr>
+<td>The From number is not connected to HubSpot.</td>
+<td>Ask an admin to connect the number.</td>
+</tr>
+<tr>
+<td>Carrier reported delivery failure (status id N).</td>
+<td>The carrier did not deliver the text. Check the contact’s number.</td>
+</tr>
+</tbody>
+</table>
+<div class="sl-heading-wrapper level-h3"><h3 id="a-received-text-has-no-picture">A received text has no picture</h3><a class="sl-anchor-link" href="#a-received-text-has-no-picture"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Section titled “A received text has no picture”</span></a></div>
+<p>The text shows in HubSpot without the picture.</p>
+<p>Contact HostMyText support.</p>
+<div class="sl-heading-wrapper level-h3"><h3 id="the-conversation-shows-the-label-unknown-visitor">The conversation shows the label “Unknown Visitor”</h3><a class="sl-anchor-link" href="#the-conversation-shows-the-label-unknown-visitor"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Section titled “The conversation shows the label “Unknown Visitor””</span></a></div>
+<p>HubSpot labels a conversation “Unknown Visitor” when it cannot match the number to a contact at the time of the first message.</p>
+<p>The app does not fix this label by itself.</p>
+<p>HubSpot has no automatic way to change it.</p>
+<p>You can fix it by hand in HubSpot:</p>
+<ol>
+<li>Open the conversation in the inbox.</li>
+<li>Add the visitor as a contact.</li>
+<li>Enter the contact details.</li>
+<li>Enter the phone number in <strong>Phone number</strong> or <strong>Mobile phone number</strong>.</li>
+<li>Save.</li>
+</ol>
+<p>The label changes to the name of the contact.</p>
+<p>HubSpot can also let you choose an existing contact instead of a new contact.</p>
+<figure class="shot"><img src="/HostMyText-for-Hubspot-Documentation/shots/05-troubleshooting-01-unknown-visitor.png" alt="Unknown Visitor conversation in the inbox" loading="lazy" /><figcaption>Unknown Visitor conversation in the inbox</figcaption></figure>
+<figure class="shot"><img src="/HostMyText-for-Hubspot-Documentation/shots/05-troubleshooting-02-add-as-contact.png" alt="Add as contact action for an Unknown Visitor" loading="lazy" /><figcaption>Add as contact action for an Unknown Visitor</figcaption></figure>
+<div class="sl-heading-wrapper level-h3"><h3 id="two-contacts-have-the-same-phone-number">Two contacts have the same phone number</h3><a class="sl-anchor-link" href="#two-contacts-have-the-same-phone-number"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Section titled “Two contacts have the same phone number”</span></a></div>
+<p>HubSpot can show a visitor instead of a contact when two contacts share a phone number.</p>
+<p>Merge or remove the duplicate contacts in HubSpot.</p>
+<div class="sl-heading-wrapper level-h3"><h3 id="a-contact-got-two-replies">A contact got two replies</h3><a class="sl-anchor-link" href="#a-contact-got-two-replies"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Section titled “A contact got two replies”</span></a></div>
+<p>A HostMyText auto-reply and a HubSpot workflow both answered.</p>
+<p>Turn off the HostMyText auto-replies on the number.</p>
+<div class="sl-heading-wrapper level-h3"><h3 id="a-contact-was-created-that-nobody-made">A contact was created that nobody made</h3><a class="sl-anchor-link" href="#a-contact-was-created-that-nobody-made"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Section titled “A contact was created that nobody made”</span></a></div>
+<p>When an unknown number sends a text, the app creates a contact.</p>
+<p>The contact has the property “HostMyText Auto Created” set to Yes.</p>
+<p>The first name of the contact is the phone number.</p>
+<p>You can edit the contact in HubSpot.</p>
+<div class="sl-heading-wrapper level-h2"><h2 id="history-download-problems">History download problems</h2><a class="sl-anchor-link" href="#history-download-problems"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Section titled “History download problems”</span></a></div>
+<div class="sl-heading-wrapper level-h3"><h3 id="the-file-does-not-contain-all-messages">The file does not contain all messages</h3><a class="sl-anchor-link" href="#the-file-does-not-contain-all-messages"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Section titled “The file does not contain all messages”</span></a></div>
+<p>The file contains only SMS messages.</p>
+<p>The file shows the messages as HubSpot shows them.</p>
+<p>It does not contain bulk messages, group messages, or messages from before you connected the app.</p>
+<p>A very long history can be cut off.</p>
+<p>Archived conversations are not in the file.</p>
+<p>The file can differ from the history in HostMyText.</p>
+<div class="sl-heading-wrapper level-h2"><h2 id="faq">FAQ</h2><a class="sl-anchor-link" href="#faq"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Section titled “FAQ”</span></a></div>
+<p><strong>Can I start a conversation from the HubSpot inbox?</strong>
+No. Start from the card on the contact record. You can reply in the inbox.</p>
+<p><strong>Why does HubSpot not show “Delivered”?</strong>
+HubSpot has no Delivered status for this app. HubSpot changes a message to FAILED if the carrier reports a failure.</p>
+<p><strong>Do bulk campaigns show in HubSpot?</strong>
+No.</p>
+<p><strong>Do group messages show in HubSpot?</strong>
+No.</p>
+<p><strong>Are old messages imported?</strong>
+No. Messages from before you connected the app do not appear.</p>
+<p><strong>Can I send more than one picture?</strong>
+No. The card sends one picture. It must be a PNG or a JPEG file.</p>
+<p><strong>I changed “HostMyText Opted Out” in HubSpot. Why did nothing change?</strong>
+HubSpot properties do not change the opt-out. Use HostMyText.</p>
+<p><strong>Which phone number does a workflow use?</strong>
+The mobile phone number of the contact. If it is empty, the phone number.</p>
+<p><strong>Why did HubSpot show a warning when I installed the app?</strong>
+HubSpot has not reviewed the app yet. See <a href="/HostMyText-for-Hubspot-Documentation/admin/install/">02</a>.</p>
+<p><strong>What happens to my messages when the app is uninstalled?</strong>
+The messages that are already in HubSpot stay in HubSpot. HostMyText keeps all of its messages, and texting in HostMyText does not change. See <a href="/HostMyText-for-Hubspot-Documentation/admin/manage/">04</a>.</p>
+<p><strong>I installed the app again. Why do my numbers show “Not connected”?</strong>
+An uninstall deletes the connections of the numbers in HubSpot. Connect each number again on the settings page. See <a href="/HostMyText-for-Hubspot-Documentation/admin/manage/">04</a>.</p>
+<p><strong>Can I use the app outside the United States?</strong>
+The app is for use in the United States only.</p>
+</div><footer class="sl-flex astro-ddtxxk7k"><div class="meta sl-flex astro-ddtxxk7k"></div><div class="pagination-links print:hidden astro-b5raizh3" dir="ltr"><a href="/HostMyText-for-Hubspot-Documentation/admin/manage/" rel="prev" class="astro-b5raizh3"><svg aria-hidden="true" class="astro-b5raizh3 astro-hkc32dio" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.5rem;"><path d="M17 11H9.41l3.3-3.29a1.004 1.004 0 1 0-1.42-1.42l-5 5a1 1 0 0 0-.21.33 1 1 0 0 0 0 .76 1 1 0 0 0 .21.33l5 5a1.002 1.002 0 0 0 1.639-.325 1 1 0 0 0-.219-1.095L9.41 13H17a1 1 0 0 0 0-2Z"/></svg><span class="astro-b5raizh3">Previous<br class="astro-b5raizh3"><span class="link-title astro-b5raizh3">Admin guide</span></span></a><a href="/HostMyText-for-Hubspot-Documentation/users/quick-start/" rel="next" class="astro-b5raizh3"><svg aria-hidden="true" class="astro-b5raizh3 astro-hkc32dio" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.5rem;"><path d="M17.92 11.62a1.001 1.001 0 0 0-.21-.33l-5-5a1.003 1.003 0 1 0-1.42 1.42l3.3 3.29H7a1 1 0 0 0 0 2h7.59l-3.3 3.29a1.002 1.002 0 0 0 .325 1.639 1 1 0 0 0 1.095-.219l5-5a1 1 0 0 0 .21-.33 1 1 0 0 0 0-.76Z"/></svg><span class="astro-b5raizh3">Next<br class="astro-b5raizh3"><span class="link-title astro-b5raizh3">Quick start for reps</span></span></a></div></footer></div></div></main></div></div></div></div></body></html>
